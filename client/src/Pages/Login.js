@@ -27,8 +27,9 @@ const Login = () => {
       e.preventDefault();
       const data = new FormData(e.currentTarget);
      await axios.post('/login', data).then((res) =>{
-      toast.success(res?.data?.msg)
+     
       if(res?.data?.msg === 'Login successfully') {
+        toast.success(res?.data?.msg)
         localStorage.setItem('userData', JSON?.stringify(res?.data?.info))
         window.location.assign('./../')
       }

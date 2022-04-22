@@ -25,7 +25,7 @@
      margin: auto;
     text-align: center;
     display: flex;
-    position: sticky;
+    position: fixed;
     bottom: 0;
 }
 

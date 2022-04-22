@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import IconButton from "@material-ui/core/IconButton";
 import Person from "@material-ui/icons/People";
@@ -107,8 +108,17 @@ const request = user?.req?.map((uR) => uR)
                 <CircularProgress style={{ color: "red" }} />
               ) : (
                 <>
-                  {userData?.map((e) => (
-                    <Tindercard key={e?._id} user={e} />
+                  {userData?.map((e, i) => (
+                  i - 1 === 0 ?
+                  
+                    <Stack direction='row' justifyContent="space-evenly" alignItems="center" spacing={1}>
+                  <Typography variant="body2" style={{color: "#fff", textShadow: "0 0 2px #000", display: i - 1  === 0 ? "block" : "none", fontSize: "1rem", padding: "1rem auto"}}>No More User!!! Base on your interest. Try again later</Typography>
+              </Stack>
+                  :
+                  
+              
+                   <Tindercard key={e?._id} user={e} />
+                   
                   ))}
                 </>
               )}

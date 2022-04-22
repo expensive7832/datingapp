@@ -1,15 +1,17 @@
 import express from "express"
 import cors from "cors"
-import bodyParser from "body-parser"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
-import formidable  from "formidable";
 import Register from "./src/Routes/Register.js"
 import Login from "./src/Routes/Login.js"
 import User from "./src/Routes/User.js"
 import Message from "./src/Routes/Message.js"
+import path from "path"
+import {fileURLToPath} from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
 
+const __dirname = path.dirname(__filename);
 
 
 dotenv.config()
@@ -36,9 +38,12 @@ const options = {
 const port = process.env.PORT || 5000;
 
 if((process.env.NODE_ENV = "production")){
+
+   
+
     app.use(express.static("client/build"));
     app.get("*", (req,res) =>{
-        res.sendFile(path.resolve(_dirname, "client", "build", "index.html"));
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     })
 }
 
