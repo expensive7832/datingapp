@@ -9,9 +9,12 @@ const ChatTab = ({friendList}) => {
 
   return (
     <div id='chatTab'>
-        <Box style={{marginBottom: '2rem'}}>
+      <Box style={{marginBottom: '2rem'}}>
         <img src={tinderimg}/>
         </Box>
+        {friendList ?
+
+        <>
         {friendList?.map((fL) =>{
          return(
           <Link to={`./../chat/${fL?._id}`} key={fL?._id}>
@@ -28,6 +31,18 @@ const ChatTab = ({friendList}) => {
           </Link>
          )
         })}
+        </>
+        
+        :
+
+        <>
+        <Box>
+          <Typography variant='body'>
+            Swipe And Make A Friend
+          </Typography>
+        </Box>
+        </>
+        }
        
     </div>
   )
