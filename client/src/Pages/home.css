@@ -1,0 +1,117 @@
+ 
+#home .MuiGrid-justify-content-xs-space-between {
+    justify-content: space-between;
+    text-align: center!important;
+}
+
+.bottomBar .MuiSvgIcon-root {
+    fill: currentColor!important;
+   
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 2rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.topBar .PrivateTabIndicator-colorSecondary-5 {
+    background-color: transparent!important;
+}
+
+.topBar .MuiIconButton-root {
+    flex: 0 0 auto;
+    color: #fff!important;
+    padding: 1.5rem;
+    overflow: visible;
+    font-size: 4rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+}
+
+.custom-shape-divider-bottom-1647547021 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    top: -4vh;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    height: 10vh;
+    margin: auto;
+}
+
+.custom-shape-divider-bottom-1647547021 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    
+}
+
+.custom-shape-divider-bottom-1647547021 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1647547021 svg {
+        width: calc(100% + 1.3px);
+        height: 215px;
+    }
+}
+.tinder-card{
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width:60%;
+    margin: auto;    
+}
+
+@media (max-width: 576px) {
+    .tinder-card{
+        width:80%;
+
+    }  
+}
+
+
+.tinder-card .MuiAvatar-root {
+    width: 100%;
+    height:auto;
+    border-radius: 0%;
+    justify-content: center;
+}
+.tinder-card .MuiAvatar-img {
+    width: 100vw;
+    border-radius: 50%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+
+
+.tinder-card .tinder-card-inner {
+   position: absolute;
+   top: 0;
+   margin: auto!important;
+  
+}
+.tinder-card .tinder-card-inner .tinder-hobby {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-bottom: .8rem;
+   margin-top: 1rem;
+}
+.tinder-card .tinder-card-inner .tinder-hobby p{
+   margin: .1rem;
+   border: 1px dashed rgb(218, 17, 17);
+   border-radius: 18%;
+   font-size: .8rem;
+   font-weight: bold;
+   padding: .3rem;
+}

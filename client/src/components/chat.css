@@ -1,0 +1,42 @@
+#chat {
+    height: 100vh!important;
+    overflow: scroll!important;
+    background: linear-gradient(315deg, #726cf8 0%, #e975a8 74%), url('./../assets/tinderbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-blend-mode:lighten;
+}
+
+#chat .MuiPaper-root{
+    background-color: inherit!important;
+}
+
+#chat img{
+    width: 2rem;
+    padding: .3rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#chat .sendBox{
+    width: 100%;
+     margin: auto;
+    text-align: center;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+}
+
+#chat .text{
+    margin: 1.5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 576px) {
+    #chat .text{
+        margin: 0 .6rem;
+        font-size: 1rem;
+    } 
+}
