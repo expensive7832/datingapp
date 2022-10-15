@@ -53,6 +53,7 @@ router.post("/register", (req, res) =>{
     
                     const user =  new Register({
                         fname: firstName,
+                        
                         lname: lastName,
                         age: age,
                         email: email,
